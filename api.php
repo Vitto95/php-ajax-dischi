@@ -1,3 +1,6 @@
-<?php include __DIR__ . '/data/db.php' ?>
+<?php 
+  require_once __DIR__ . '/data/db.php';
+  header('Content-Type: application/json');
+  echo json_encode($database);
+?>
 
-<?php var_dump($database)?>
