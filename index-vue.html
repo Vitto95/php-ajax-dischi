@@ -16,6 +16,15 @@
     <div id="app">
       <header>
         <img src="" alt="spotify-logo" />
+        <select
+          v-model="genreToSearch"
+          @change="getDataAPI"
+          name="genres"
+          id=""
+        >
+          <option value="all">all</option>
+          <option v-for="genre in genres" :value="genre">{{genre}}</option>
+        </select>
       </header>
 
       <main>
